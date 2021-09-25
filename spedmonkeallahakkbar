@@ -1,0 +1,71 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Lux", "DarkTheme")
+
+
+
+
+
+
+--Player
+local Player = Window:NewTab("Player")
+    local PlayerSection = Player:NewSection("Misc")
+
+    PlayerSection:NewSlider("Walkspeed", "Changes the walkspeed", 250, 16, function(v)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+    end)
+
+    PlayerSection:NewSlider("Jumppower", "Changes the jumppower", 250, 50, function(v)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+    end)
+
+
+--Teleports
+local Teleports = Window:NewTab("NPC Teleports")
+ local Section = Teleports:NewSection("Teleports")
+ Section:NewButton("Blox Fruit Dealer", "TP", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(928.585388, 14.97155, 1412.76233, -0.907377243, 0, -0.420317143, 0, 1, 0, 0.420317143, 0, -0.907377243)
+
+ end)
+
+  
+ Section:NewButton("Weapon Storage", "TP", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1083.97888, 14.7949381, 1324.87695, -0.258864403, 0, 0.965913713, 0, 1, 0, -0.965913713, 0, -0.258864403)
+
+
+  end)
+  Section:NewButton("Pirate Recruiter", "TP", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2572.78687, 5.55691004, 2169.45557, -0.819156051, 0, 0.573571265, 0, 1, 0, -0.573571265, 0, -0.819156051)
+
+end)
+
+Section:NewButton("Experienced Captain (New world)", "TP", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1177.87317, 7.67800474, 1769.99536, 0.932694256, 0.107451186, -0.344290078, -7.45058149e-09, 0.954589963, 0.297922671, 0.360668004, -0.277870774, 0.890340567)
+
+
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--Toggles
+PlayerSection:NewToggle("Inf jump", "Jump more then once", function(state)
+    if state then
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
+end)
